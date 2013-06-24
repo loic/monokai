@@ -1,0 +1,77 @@
+/*
+  Background: #151515;
+  Foreground: #F8F8F2;
+  Gray: #75715E;
+  Orange: #FD971F;
+  Green: #A6E22E;
+  Pink: #F92672;
+  Blue: #66D9EF;
+  Purple: #AE81FF;
+*/
+
+html {
+  font-family: 'Menlo';
+  font-size: 12px;
+  background-color: #151515;
+  color: #F8F8F2;
+  word-wrap: break-word;
+  padding: 10px 20px;
+}
+
+.line { margin:0; padding:0; margin-bottom: 5px; }
+.line[alternate=even] {}
+.line[alternate=odd] {}
+.line[highlight=true] {}
+.line[type=action] .sender:before {
+  content: "• ";
+  white-space: nowrap;
+}
+
+.url { color: #E6DB74; word-break: break-all; }
+.address { text-decoration: underline; word-break: break-all; }
+
+.highlight {
+  color: #FD971F;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.time {
+  color: #75715E;
+  float: right;
+  margin-left: 10px;
+}
+
+.place {
+  color: #F92672;
+} 
+
+.sender[type=myself] { color: #FD971F; }
+.sender[type=normal] { color: #A6E22E; }
+.sender[type=normal][colornumber='0']  { color: #AE81FF; }
+.sender[type=normal][colornumber='1']  { color: #66D9EF; }
+.sender[type=normal][colornumber='2']  { color: #A6E22E; }
+.sender[type=normal][colornumber='3']  { color: #F92672; }
+.sender[type=normal][colornumber='4']  { color: #AE81FF; }
+.sender[type=normal][colornumber='5']  { color: #66D9EF; }
+.sender[type=normal][colornumber='6']  { color: #A6E22E; }
+.sender[type=normal][colornumber='7']  { color: #F92672; }
+.sender[type=normal][colornumber='8']  { color: #AE81FF; }
+.sender[type=normal][colornumber='9']  { color: #66D9EF; }
+.sender[type=normal][colornumber='10'] { color: #A6E22E; }
+.sender[type=normal][colornumber='11'] { color: #F92672; }
+.sender[type=normal][colornumber='12'] { color: #AE81FF; }
+.sender[type=normal][colornumber='13'] { color: #66D9EF; }
+.sender[type=normal][colornumber='14'] { color: #A6E22E; }
+.sender[type=normal][colornumber='15'] { color: #F92672; }
+
+.message[type] { color: #75715E; }
+.message[type=error], .message[type=error] { color: red; }
+.message[type="privmsg"] { color:#F8F8F2; }
+.message[type=join]:before, .message[type=part]:before, .message[type=kick]:before,
+.message[type=quit]:before, .message[type=kill]:before, .message[type=nick]:before,
+.message[type=mode]:before, .message[type=topic]:before, .message[type=invite]:before,
+.message[type=wallops]:before {
+  content: "» ";
+  color: #F92672;
+}
